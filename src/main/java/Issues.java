@@ -180,7 +180,6 @@ public class Issues {
         return 0;
     }
 
-    // Need to fix here
     public static void viewAllIssues(Connection connect) {
         String query = "SELECT * FROM issues";
         try (PreparedStatement prepStatement = connect.prepareStatement(query)) {

@@ -24,7 +24,7 @@ class Users {
         }
     }
 
-    public static void update(Connection connect, int id) throws SQLException {
+    public static void update(Connection connect, int id) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Are yoy really wanna edit name?:  1 - edit name || 0 - return");
 
@@ -49,7 +49,7 @@ class Users {
         }
     }
 
-    public static void delete(Connection connect, int projectId) throws SQLException { // think about name
+    public static void delete(Connection connect, int projectId) { // think about name
         String query = "DELETE FROM users WHERE  id = ?";
         try (PreparedStatement prepStatement = connect.prepareStatement(query)) {
             prepStatement.setInt(1, projectId);

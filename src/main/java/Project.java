@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-//COMMENT ALL CLASS!!!
 public class Project {
     private static final Logger LOGGER = Logger.getLogger(Project.class.getName());
 

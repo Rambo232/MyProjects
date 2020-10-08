@@ -37,7 +37,7 @@ public class App {
                 return number;
             } else {
                 System.out.println("Incorrect number, type correct one in limit ");
-                switcher(limit);                       // need to watch!
+                switcher(limit);
             }
         } catch (InputMismatchException e) {
             LOGGER.error("exception : {}", e.getCause());
@@ -138,7 +138,6 @@ public class App {
     }
 
     private static void deleteInfo(Connection connect) throws SQLException {
-//        while (true) {
         System.out.println(Util.delete);
         switch (switcher(3)) {
             case 1:
@@ -146,7 +145,7 @@ public class App {
                     System.out.println(Util.noUserCreated);
                     return;
                 }
-                while (true) { // may be debug point!
+                while (true) {
                     Users.viewAllUsers(connect);
                     System.out.println("User id to delete, see table above \n  ^");
                     int id = Util.isDigit();
@@ -163,7 +162,7 @@ public class App {
                     System.out.println(Util.noIssueCreated);
                     return;
                 }
-                while (true) { // may be debug point!
+                while (true) {
                     Issues.viewAllIssues(connect);
                     System.out.println("Issue id to delete, see table above    ^");
                     int id = Util.isDigit();
@@ -299,7 +298,7 @@ public class App {
             while (!exit3) {
                 System.out.println("Type project id: ");
                 int id2 = Util.isDigit();
-                if (Util.checkUser(connect, id2)) { // may be problem here
+                if (Util.checkUser(connect, id2)) {
                     if (Project.viewIssuesCount(connect, id2) == 0) {
                         System.out.println("There is no one issues on this project..");
                         return;
